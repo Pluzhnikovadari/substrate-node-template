@@ -1,0 +1,10 @@
+node template
+build substrate command:
+cargo build --release
+run substrate command:
+./target/release/node-template --base-path /tmp/alice --chain local --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --validator --rpc-methods Unsafe
+
+
+api-client 
+build and run existing folder
+cargo +nightly-2020-10-01 run --example  name_of_file
