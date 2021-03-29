@@ -83,6 +83,7 @@ decl_module! {
 			Ok(())
 		}
 
+		#[weight = 10_000 + T::DbWeight::get().writes(1)]
 		pub fn make_something(something: u32) -> dispatch::DispatchResult {
 			// Check that the extrinsic was signed and get the signer.
 			// This function will return an error if the extrinsic is not signed.
