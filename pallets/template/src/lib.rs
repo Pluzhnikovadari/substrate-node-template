@@ -28,7 +28,7 @@ decl_storage! {
 	trait Store for Module<T: Trait> as TemplateModule {
 		// Learn more about declaring storage items:
 		// https://substrate.dev/docs/en/knowledgebase/runtime/storage#declaring-storage-items
-		Something get(fn something): Option<u32>;
+		pub Something get(fn something): Option<u32>;
 	}
 }
 
