@@ -4,6 +4,18 @@ cargo build --release
 run substrate command:
 ./target/release/node-template --base-path /tmp/alice --chain local --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --validator --rpc-methods Unsafe
 
+For Alice:
+./target/release/node-template \
+  --base-path /tmp/node01 \
+  --chain ./customSpecRaw.json \
+  --port 30333 \
+  --ws-port 9945 \
+  --rpc-port 9933 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --validator \
+  --rpc-methods Unsafe \
+
+For Bob:
 ./target/release/node-template \
    --base-path /tmp/node01 \
    --chain ./customSpecRaw.json \
@@ -19,3 +31,5 @@ run substrate command:
 api-client 
 build and run existing folder
 cargo +nightly-2020-10-01 run --example  name_of_file
+
+
